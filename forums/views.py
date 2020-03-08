@@ -1,4 +1,5 @@
 from django.shortcuts import render
+
 posts = [
     {
         'author': 'CoreyMS',
@@ -13,6 +14,15 @@ posts = [
         'date_posted': 'August 28, 2018'
     }
 ]
-# Create your views here.
-def index(request):
-    return render(request,'home/navbar.html')
+
+
+def blog(request):
+    context = {
+        'posts': posts,
+        'title' : "Blog page"
+    }
+    return render(request, 'blog/home.html', context)
+
+
+def about(request):
+    return render(request, 'blog/about.html', {'title': 'About'})
