@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(5c#6#ev1+a_$x1s+$wdn!-#ghnqq=tya+vu5u66=r5+))5l1&'
+SECRET_KEY = 'o8t#h&ik$6roy8w=8=3%c*x8)tfs(-sv)q0k3io4ksvt_i@^jh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,10 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'forums','users','home','crispy_forms',
-    'services'
+    'users.apps.UsersConfig',
 ]
-
+AUTH_USER_MODEL = 'users.User'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -120,9 +119,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_URL = '/static/' #url for static files
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #uploaded files will be saved here
 MEDIA_URL = '/media/'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
-LOGIN_REDIRECT_URL = 'home'
-LOGIN_URL ='login'
+CRISPY_TEMPLATE_PACK = 'bootstrap4' #crispy modification
+
+LOGIN_URL = 'login'
+
+LOGIN_REDIRECT_URL = 'home' #redirect user to home page when logging in#
