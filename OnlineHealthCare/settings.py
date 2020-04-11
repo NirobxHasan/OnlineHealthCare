@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
+    'home.apps.HomeConfig',
+    'crispy_forms',
 ]
 AUTH_USER_MODEL = 'users.User'
 MIDDLEWARE = [
