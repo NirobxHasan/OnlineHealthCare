@@ -10,7 +10,7 @@
   <div class="hero-container">
     <h1>Welcome to HealthCare </h1>
     <h2>Cloud based Online solution for better healthcare</h2>
-    <img src="{% static 'home/style/img/baymax.png' %}" alt="Hero Imgs">
+    <img src="{% static 'home/style/img/Baymax.png' %}" alt="Hero Imgs">
     <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
 
   </div>
@@ -46,9 +46,9 @@
 
       <div class="col-md-6 col-lg-4">
         <div class="feature-block">
-          {% comment %} {% if user.is_patient %}
+          {% if user.is_patient %}
           <a href="{% url 'prescription_request' %}">
-            {% endif %} {% endcomment %}
+            {% endif %} 
             <img src="{% static 'home/style/img/svg/eprescription.png'%}" alt="img" class="img-fluid">
             <h4>E-Prescriptions</h4>
           </a>

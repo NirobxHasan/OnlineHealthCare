@@ -62,9 +62,9 @@
         <ul class="nav-menu">
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
-          {% comment %} <li><a href="{% url 'blog' %}">Health Blog</a></li> {% endcomment %}
+          <li><a href="{% url 'blog' %}">Health Blog</a></li>
 
-          {% comment %} {% if user.is_patient %}
+          {% if user.is_patient %}
           <li class="menu-has-children"><a href="">Service</a>
             <ul>
               <li><a href="{% url 'prescription_request' %}">E-Prescription</a></li>
@@ -87,7 +87,7 @@
             <li><a href="{% url 'createPres'%}">E-Prescription</a></li>
           {% endif %}
 
-          <li><a href="{% url 'hospitals' %}">Hospitals</a></li> {% endcomment %}
+          <li><a href="{% url 'hospitals' %}">Hospitals</a></li>
 
           {% if user.is_authenticated %}
           <li class="menu-has-children"><a href="">Your Tab</a>
@@ -224,7 +224,7 @@
 
     <div class="copyrights">
       <div class="container">
-        <p>&copy; Copyrights Healix. All rights reserved.</p>
+        <p>&copy; Copyrights HealthCare. All rights reserved.</p>
         <div class="credits">
           <!--
             All the links in the footer should remain intact.
